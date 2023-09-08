@@ -1,0 +1,124 @@
+/* Header */
+
+.imglogo{
+width: 140px;
+height: 140px;
+display: flex;
+padding-left: 1260px;
+}
+
+.logo{
+display: flex;
+align-items: center;
+justify-content: center;
+align-self: center;
+width: 140px;
+height: 140px;
+}
+
+.header{
+    background-color: lightpink;
+    height: 130px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body{
+    background-color: hotpink;
+    margin: 0px;
+}
+
+.ListaNav{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: row;
+}
+
+/* Main */
+
+.titulos_principales{
+    color: white;
+    margin: 140px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  display: flex;
+}
+
+.seccion{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.pelicula1{
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.fotopeliculas{
+    width: 200px;
+    height: 300px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.titulo{
+    color: white;
+    text-align: center;
+    
+}
+
+.barra{
+    color: white; 
+    text-decoration: none;
+}
+
+.section-barra{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    padding: 0px;
+    margin: 15px;
+}
+
+.footer{
+    background-color: lightpink;
+    margin: 0px;
+    padding: 30px;  
+}
+
+.footernombre{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.detalle-pelicula{
+    background-color: rgba(255, 20, 145, 0.317);
+    height: 550px;
+    width: 1300px;
+    margin: 15px;
+}
+
+.imgpelicula{
+    height: 350px;
+    width: 250px;
+    margin-top: 100px;
+    margin-bottom: 110px;
+    margin-left: 100px;
+}
+
+.detalles{
+    color: white;
+    display: flex;
+    align-self: left;
+}
