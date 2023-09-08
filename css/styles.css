@@ -1,5 +1,19 @@
 /* Header */
 
+.body{
+    background-color: hotpink;
+    margin: 0px;
+}
+
+.header{
+    background-color: lightpink;
+    height: 130px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .imglogo{
 width: 140px;
 height: 140px;
@@ -16,18 +30,17 @@ width: 140px;
 height: 140px;
 }
 
-.header{
-    background-color: lightpink;
-    height: 130px;
-    margin: 0px;
+.section-barra{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    list-style-type: none;
+    flex-direction: row;
+    padding: 0px;
+    margin: 15px;
 }
 
-.body{
-    background-color: hotpink;
-    margin: 0px;
+.barra{
+    color: white; 
+    text-decoration: none;
 }
 
 .ListaNav{
@@ -73,21 +86,9 @@ height: 140px;
 .titulo{
     color: white;
     text-align: center;
-    
 }
 
-.barra{
-    color: white; 
-    text-decoration: none;
-}
-
-.section-barra{
-    display: flex;
-    list-style-type: none;
-    flex-direction: row;
-    padding: 0px;
-    margin: 15px;
-}
+/* footer */
 
 .footer{
     background-color: lightpink;
@@ -102,23 +103,29 @@ height: 140px;
     margin: 10px;
 }
 
+/* Detail movie */
 .detalle-pelicula{
-    background-color: rgba(255, 20, 145, 0.317);
-    height: 550px;
-    width: 1300px;
     margin: 15px;
 }
 
 .imgpelicula{
     height: 350px;
     width: 250px;
-    margin-top: 100px;
-    margin-bottom: 110px;
-    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    margin-left: 84vh;
 }
 
 .detalles{
     color: white;
     display: flex;
-    align-self: left;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.titulomovie{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 20px;
 }
