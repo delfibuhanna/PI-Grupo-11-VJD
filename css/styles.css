@@ -165,7 +165,6 @@ padding: 30px;
 background-color: hotpink;
 margin: 0px;
 }
-        
 .header{
 background-color: lightpink;
 height: 80px;
@@ -173,32 +172,31 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 }
-
+    
 .imglogo{
 width: 80px;
 height: 80px;
 }
-    
+        
 .section-barra{
 display: flex;
 flex-direction: column;
 padding: 0px;
 margin: 6px;
 }
-                
+                    
 .barra{
 color: white; 
 text-decoration: none;
 font-size: 10px;
 }
-                
+                    
 .busqueda{
 width: 60px; 
 margin-left: 5px;
 }
-
 /* main */
-
+        
 .titulos_principales{
 color: white;
 margin: 30px;
@@ -208,64 +206,64 @@ display: flex;
 justify-content: center;
 font-size: 25px;
 }
-    
+        
 .seccion{
 display: flex; 
 justify-content: center;
 flex-wrap: wrap;
 margin-top: 0px;
 }
-    
 .pelicula1{
 justify-content: center;
 margin-top: 45px;
 }
-    
+        
 .fotopeliculas{
 width: 200px;
 height: 300px;
 align-items: center;
 }
-    
+        
 .titulo{
 color: white;
 text-align: center;
 margin-top: 0px;
-font-size: 20px;}
+font-size: 20px;
+}
 
 /* footer */
-
+        
 .footer{
 background-color: lightpink;
 margin: 0px;
 padding: 20px;  
 }
-
+    
 .footernombre{
 color: white;
 display: flex;
 margin: 10px;
 }
 
-/* detail movie/serie*/
-
-.cajaPadre{
+ /* detail movie/serie*/
+        
+ .cajaPadre{
 display: flex;
 justify-content: center;
 }
-            
+                
 .imgpelicula{
 height: 250px;
 width: 150px;
 }
-            
+                
 .detalles{
 color: white;
 display: flex;
 text-align: center;
 font-size: 20px;
 }
-            
+                
 .titulomovie{
 display: flex;
 justify-content: center;
@@ -274,13 +272,13 @@ font-size: 25px;
 }
 
 /* genres */
-
+        
 .cajaPadre1{
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-    
+        
 .contenedor-input{ 
 border-color: rgb(248, 4, 126);
 height: 50px;
@@ -288,7 +286,7 @@ width: 120px;
 margin-top: 15px;
 margin-bottom: 15px;
 }
-
+    
 .footer-genres{
 background-color: lightpink;
 margin: 0px;
@@ -297,25 +295,25 @@ padding: 20px;
 }
 
 /* search results */
-
+        
 .footer-results{
 background-color: lightpink;
 margin: 0px;
 margin-top: 160px;
 padding: 20px; 
 }
-    
+        
 /* favoritos */
-    
+        
 .footer-favorite{
 background-color: lightpink;
 margin: 0px;
 margin-top: 180px;
 padding: 20px; 
 }
-    
+        
 /* footer detail genres */
-
+    
 .footer-detailgenres{
 background-color: lightpink;
 margin: 0px;
@@ -323,4 +321,3 @@ margin-top: 170px;
 padding: 20px; 
 }
 }
-
