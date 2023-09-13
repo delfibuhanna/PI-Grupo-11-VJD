@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FAVORITOS</title>
     <link rel="stylesheet" href="../PI-Grupo-11-VJD/css/styles.css">
 </head>
-<body>
+<body class="body">
     <header class="header">
+
+        <form action="./search-results.html" method="get">
+
+            <div>
+            <input class="busqueda" type="text" name="Busqueda" id="mibusqueda" placeholder="Busqueda">
+            <button class="busqueda" type="submit">Buscar</button>
+            </div>
+                
+         </form>
       
-        <section class="logo">
+        <section>
             <img class="imglogo" src="../PI-Grupo-11-VJD/img/logo.png" alt="logo">
         </section>
 
         <section>
         <ul class="section-barra">
-            <li class="section-barra"><a class="barra" href="./index.html"> <strong>HOME</strong></a></li>
-            <li class="section-barra"><a class="barra" href="./genres.html"> <strong>GENEROS</strong> </a></li>
+            <li class="section-barra"><a class="barra" href="../PI-Grupo-11-VJD/index.html"> <strong>HOME</strong></a></li>
+            <li class="section-barra"><a class="barra" href="../PI-Grupo-11-VJD/genres.html"> <strong>GENEROS</strong> </a></li>
             <li class="section-barra"><a class="barra" href="../PI-Grupo-11-VJD/favorite.html"> <strong>FAVORITOS</strong> </a></li>
         </ul>
        
@@ -26,7 +35,7 @@
 
     <main>
 
-    <h2 class="titulos_principales"><strong> Favoritos </strong></h2>
+    <h1 class="titulos_principales"><strong> Favoritos </strong></h1>
 
     <section class="seccion">
 
@@ -58,7 +67,7 @@
     </section>
 
 
-<footer class="footer">
+<footer class="footer-favorite">
     <ul class="footernombre">
         <li class="footernombre">Julieta Mielnicki</li>
         <li class="footernombre">Victoria Yoffe</li>
@@ -66,5 +75,6 @@
     </ul>
     
 </footer>
+
 </html>
 </body>

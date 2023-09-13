@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../PI-Grupo-11-VJD/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
     <title>DETAIL MOVIE</title>
 </head>
 
 <body class="body">
 
     <header class="header">
+
+        <form action="./search-results.html" method="get">
+
+            <div>
+            <input class="busqueda" type="text" name="Busqueda" id="mibusqueda" placeholder="Busqueda">
+            <button class="busqueda" type="submit">Buscar</button>
+            </div>
+                
+         </form>
       
-        <section class="logo">
+        <section>
             <img class="imglogo" src="../PI-Grupo-11-VJD/img/logo.png" alt="logo">
         </section>
 
         <section>
         <ul class="section-barra">
-            <li class="section-barra"><a class="barra" href=""> <strong>HOME</strong></a></li>
-            <li class="section-barra"><a class="barra" href=""> <strong>GENEROS</strong> </a></li>
-            <li class="section-barra"><a class="barra" href=""> <strong>FAVORITOS</strong> </a></li>
+            <li class="section-barra"><a class="barra" href="../PI-Grupo-11-VJD/index.html"> <strong>HOME</strong></a></li>
+            <li class="section-barra"><a class="barra" href="../PI-Grupo-11-VJD/genres.html"> <strong>GENEROS</strong> </a></li>
+            <li class="section-barra"><a class="barra" href="../PI-Grupo-11-VJD/favorite.html"> <strong>FAVORITOS</strong> </a></li>
         </ul>
         </section>
 
@@ -29,31 +40,38 @@
 
         <h1 class="titulomovie"> Detalle de película</h1>
 
-        <article class="detalle-pelicula">
+        <article>
         
         <h2 class="detalles">Barbie en una aventura de sirenas</h2>
 
+        <article class="cajaPadre">
         <img class="imgpelicula" src="../PI-Grupo-11-VJD/img/barbie en una aventura de sirenas.jpeg" alt="">
-        
+        </article>
+
+        <article class="colorapps">
+        <i class="fa-regular fa-heart"></i>
+        </article>
+
         <h3 class="detalles">Estreno: 15/10/2023</h3>
 
         <h3 class="detalles">Rating: 7.8</h3>
 
-        <h3 class="detalles">Género: Animacion - Comedia</h3>
+        <a class="barra" href="../PI-Grupo-11-VJD/detail-genres.html"><h3 class="detalles">Género: Animacion - Comedia</h3></a>
 
-        <p class="detalles"> Merliah es una campeona de surf de Malibú y una adolescente normal hasta que un día descubre que es una sirena. La joven y su delfín deben rescatar a su madre y salvar al mundo marino. Por el camino conoce a unas sirenas con las que entabla amistad. </p>
-
+        <p class="detalles"> Merliah es una campeona de surf de Malibú y una adolescente normal hasta que un día descubre que es una sirena. La joven y su delfín deben rescatar a su madre y salvar al mundo marino.</p>
         
-
         </article>
 
     </main>
 
-
-
-
-
-
+    <footer class="footer">
+        <ul class="footernombre">
+            <li class="footernombre">Julieta Mielnicki</li>
+            <li class="footernombre">Victoria Yoffe</li>
+            <li class="footernombre">Delfina Buhanna</li>
+        </ul>
+        
+    </footer>
 
 </body>
 </html>
