@@ -1,0 +1,95 @@
+body{
+    background-color: hotpink;
+    margin: 0px;
+}
+
+.header{
+    background-color: lightpink;
+    height: 130px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imglogo{
+width: 140px;
+height: 140px;
+display: flex;
+padding-left: 1260px;
+}
+
+.logo{
+display: flex;
+align-items: center;
+justify-content: center;
+align-self: center;
+width: 140px;
+height: 140px;
+}
+
+.section-barra{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    padding: 0px;
+    margin: 15px;
+}
+
+.barra{
+    color: white; 
+    text-decoration: none;
+}
+
+
+/* Main */
+
+.titulos_principales{
+    color: white;
+    margin: 140px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.seccion{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.pelicula1{
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.fotopeliculas{
+    width: 200px;
+    height: 300px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.titulo{
+    color: white;
+    text-align: center;
+}
+
+/* footer */
+
+.footer{
+    background-color: lightpink;
+    margin: 0px;
+    padding: 30px;  
+}
+
+.footernombre{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
