@@ -42,26 +42,33 @@
 
         <article>
         
-        <h2 class="detalles">Barbie life in the dreamhouse</h2>
+        <h2 class="detalles" id="titulo"></h2>
         
         <article class="cajaPadre">
-        <img class="imgpelicula" src="../PI-Grupo-11-VJD/img/barbie dream house adventure..webp" alt="">
+        <img class="imgpelicula" id="serie" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="${data.name}">
         </article>
-    <div>
-        <article class="colorapps">
-            <i class="fa-regular fa-heart"></i>
-            </article> 
-    </div>
-    
-        <h3 class="detalles">Estreno: 21/05/2024</h3>
+        
+        <form action="./favorite.html" method="get" class="colorapps">
+            <button class="fa-regular fa-heart"></button>
+        </form>
+     
+        <h3 class="detalles" id="fecha"></h3>
 
-        <h3 class="detalles">Rating: 8.4</h3>
+        <h3 class="detalles" id="duracion"></h3>
 
-        <!--editar los generos-->
+        <a class="barra" href="../PI-Grupo-11-VJD/detail-genres.html"><h3 class="detalles" id="genero"></h3></a>
 
-        <a class="barra" href="../PI-Grupo-11-VJD/detail-genres.html"><h3 class="detalles">Género: Fantasía - Familia - Comedia</h3></a>
+        <p class="detalles" id="sinopsis"></p>
 
-        <p class="detalles">Barbie se embarca en divertidas aventuras junto a su familia y sus amigos; desde viajes en auto hasta travesuras de hermanas, ella descubre que todo es posible con un poco de ayuda y muchas risas. </p>
+        <section class="colorapps">
+            <button class="boton" id="recom" type="button">Ver recomendaciones</button>
+        </section>
+        <section class="reco-container" style="display:none;">
+            <h2 class="titulomovie">Recomendaciones</h2>
+        </section>
+        <section class="recomendar">
+
+        </section>
 
         </article>
 
@@ -75,6 +82,6 @@
         </ul>
         <img class="footerLogo" src="./img/logoMDB.svg" alt="">
     </footer>
-
+    <script src="./js/detail-serie.js"></script>
 </body>
 </html>

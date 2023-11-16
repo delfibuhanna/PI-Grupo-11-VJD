@@ -42,25 +42,35 @@
 
         <article>
         
-        <h2 class="detalles">Barbie en una aventura de sirenas</h2>
+        <h2 class="detalles" id="titulo"></h2>
 
         <article class="cajaPadre">
-        <img class="imgpelicula" src="../PI-Grupo-11-VJD/img/barbie en una aventura de sirenas.jpeg" alt="">
+        <img class="imgpelicula" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="${data.name}">
         </article>
 
-        <article class="colorapps">
-        <button id="btn">
-            <i class="fa-regular fa-heart"></i>
-        </button>
-        </article>
+        <form action="./favorite.html" method="get" class="colorapps">
+            <button class="fa-regular fa-heart"></button>
+        </form>
 
-        <h3 class="detalles">Estreno: 15/10/2023</h3>
+        <h3 class="detalles" id="fecha"></h3>
 
-        <h3 class="detalles">Rating: 7.8</h3>
+        <h3 class="detalles" id="duracion"></h3>
 
-        <a class="barra" href="../PI-Grupo-11-VJD/detail-genres.html"><h3 class="detalles">Género: Animacion - Comedia</h3></a>
+        <h3 class="detalles" id="rating"></h3>
 
-        <p class="detalles"> Merliah es una campeona de surf de Malibú y una adolescente normal hasta que un día descubre que es una sirena. La joven y su delfín deben rescatar a su madre y salvar al mundo marino.</p>
+        <a class="barra" href="../PI-Grupo-11-VJD/detail-genres.html"><h3 class="detalles" id="genero"></h3></a>
+
+        <p class="detalles" id="sinopsis"></p>
+        
+        <section class="colorapps">
+            <button class="boton" id="recom" type="button">Ver recomendaciones</button>
+        </section>
+        <section class="reco-container" style="display:none;">
+            <h2 class="titulomovie">Recomendaciones</h2>
+        </section>
+        <section class="recomendar">
+
+        </section>
         
         </article>
 
@@ -74,6 +84,6 @@
         </ul>
         <img class="footerLogo" src="./img/logoMDB.svg" alt="">
     </footer>
-
+    <script src="./js/detail-movie.js"></script>
 </body>
 </html>

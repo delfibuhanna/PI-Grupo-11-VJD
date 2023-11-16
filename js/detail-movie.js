@@ -1,7 +1,71 @@
 let api_key = '325b851d442abfa1f66681afca0f296b'
-let detailPelicula = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${acaVaLaAPIKey}`
-let detailSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`
+let qs = location.search;
+let qsToObj = new URLSearchParams(qs)
+let id = qsToObj.get('id')
+let detailPelicula = `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`
 
-let seccion = document.querySelector(".seccion");
-let listas = document.querySelector("#lista");
-let vista = document.querySelector("#vistas");
+
+let titulo = document.querySelector('#titulo')
+let imagen = document.querySelector('.imgpelicula')
+let rating = document.querySelector('#rating')
+let fecha = document.querySelector('#fecha')
+let duracion = document.querySelector('#duracion')
+let sinopsis = document.querySelector('#sinopsis')
+let genero = document.querySelector('#genero')
+let boton = document.querySelector('#recom')
+let container = document.querySelector('.reco-container')
+let recomenDisplay = document.querySelector('.recomendar')
+
+fetch(detailPelicula)
+    .then(function(response){
+        return response.json()
+    })
+
+    .then(function(data){
+        console.log(data);
+        
+        let generos = ""
+        for (let index = 0; index < data.genres.length; index++) {
+            generos += `${data.genres[index].name}`
+        }
+
+        imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
+        titulo.innerText += " " + data.original_title;
+        rating.innerText += "Rating: " + data.vote_average;
+        fecha.innerHTML += "Estreno: " + data.release_date;
+        duracion.innerText += "Duracion: " + data.runtime + " mins"
+        sinopsis.innerText += "Sinopsis: " + data.overview;
+        genero.innerText += "Genero: " + generos;
+       
+    })
+        .catch(function(error){
+            console.log(error)
+    });
+
+boton.addEventListener("click", function (e){
+    let recom = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${api_key}`;
+
+    console.log(recom);
+    fetch(recom)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function(data){
+            console.log(data);
+            container.style.display = "block";
+            let info = "";
+            for(let index = 0; index < 5; index++){
+                info += `<img class="imgpelicula" src="https://image.tmdb.org/t/p/w500/${data.results[index].poster_path}"></img>
+                <h2 class="detalles" id="titulo">${data.results[index].title}</h2>`
+            }
+
+        recomenDisplay.innerHTML = info;
+
+        })
+
+    .catch(function(error) {
+        console.log(error);
+
+    })
+
+})

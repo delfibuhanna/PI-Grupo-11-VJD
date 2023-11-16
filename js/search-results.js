@@ -1,38 +1,42 @@
+let api_key= '325b851d442abfa1f66681afca0f296b'
 let loc = location.search;
 let o = new URLSearchParams(loc)
 let busqueda = o.get("buscar")
-let nombre =document.querySelector(".seccion");
-let api_key= '325b851d442abfa1f66681afca0f296b'
 
-let urlPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${ busqueda}`
-let urlSeries = `https://api.themoviedb.org/3/search/tv?api_key=${api_key}&query=${ busqueda}`
+let urlPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${busqueda}`
+let urlSeries = `https://api.themoviedb.org/3/search/tv?api_key=${api_key}&query=${busqueda}`
 
-console.log(busqueda);
+let titulo = document.querySelector(".titulos_principales");
+let series = document.querySelector("#seccionS");
+let pelicula = document.querySelector(".seccion");
+
+
 
 fetch(urlPeliculas)
     .then(function(response){
         return response.json()
 })
     .then(function(data){
-        console.log(data.results);
-        let pelicula = data.results
-        let informacion = " "
-        for (let i=0; i<5; i++){
-           informacion += 
-           
-           
-           
-           
-           `<article class="pelicula1">
-            <a href="./detail-movie.html?id=${peliculas[i].id}"><img class="fotopeliculas" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt="" ></a>
-            <h3 class="titulo"><strong>${peliculas[i].title}</strong></h3>
-            <h4 class="titulo"><strong>${peliculas[i].release_date}</strong></h4>
-        </article>`
+        if (data.results.length > 0){
+            console.log(data.results);
+            let peliculas = data.results
+            let informacion = " "
+            for (let index = 0; index < 5; index++){
+                
+                informacion.innerHTML += `<article class="pelicula1">
+        <a href="./detail-movie.html?id=${peliculas[index].id}"><img class="fotopeliculas" src="https://image.tmdb.org/t/p/w500/${peliculas[index].poster_path}" alt="" ></a>
+        <h3 class="titulo"><strong>${peliculas[index].title}</strong></h3>
+        <h4 class="titulo"><strong>${peliculas[index].release_date}</strong></h4>
+        </article>`}
+            pelicula.innerHTML = informacion
+            titulo.innerText = `Resultados de la busqueda para: ${busqueda}`
         }
-        urlPeliculas.innerHTML= informacion
+        else{
+            pelicula.innerHTML = `<p> No hay resultados para su busqueda </p>`
+        }
         return data
     })
-        .catch(function(error){
-            return;
+    .catch(function(error){
+        console.log(error);
     })
 
