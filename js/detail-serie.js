@@ -8,6 +8,7 @@ let titulo = document.querySelector('#titulo')
 let imagen = document.querySelector('#serie')
 let rating = document.querySelector('#rating')
 let fecha = document.querySelector('#fecha')
+let duracion = document.querySelector('#duracion')
 let sinopsis = document.querySelector('#sinopsis')
 let genero = document.querySelector('#genero')
 
@@ -23,7 +24,7 @@ fetch(detailSerie)
         console.log(data);
         let generos = ""
         for (let index = 0; index < data.genres.length; index++) {
-            generos += `${data.genres[index].name}`
+            generos += `<a  class="g" href="./detail-genres.html?id=${data.genres[index].id}">${data.genres[index].name}</a>`
         }
 
         imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
@@ -31,7 +32,7 @@ fetch(detailSerie)
         rating.innerText += "Rating: " + data.vote_average;
         fecha.innerHTML += "Estreno: " + data.first_air_date;
         sinopsis.innerText += "Sinopsis: " + data.overview;
-        genero.innerText += "Genero: " + generos;
+        genero.innerHTML += "Genero: " + generos;
        
     })
         .catch(function(error){
@@ -39,9 +40,9 @@ fetch(detailSerie)
     });
 
 boton.addEventListener("click", function (e){
-    let recom = `https://api.themoviedb.org/3/tv/${id}/recommendations?api_key=${api_key}`
-    console.log(recom);
-    
+    let recom = `https://api.themoviedb.org/3/tv/${id}/recommendations?api_key=${api_key}`;
+   
+    console.log(recom); 
     fetch(recom)
         .then(function (response) {
             return response.json()
@@ -51,8 +52,8 @@ boton.addEventListener("click", function (e){
             container.style.display = "block";
             let info = "";
             for(let index = 0; index < 5; index++){
-                info += `<img class="imgpelicula" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="${data.name}">
-                <h2 class="detalles" id="titulo">${data.results[index].title}</h2>`
+                info += `<img class="imgpelicula" src="https://image.tmdb.org/t/p/w500/${data.results[index].poster_path}">
+                <h2 class="detalles" id="titulo">${data.results[index].name}</h2>`
                 
             }
 

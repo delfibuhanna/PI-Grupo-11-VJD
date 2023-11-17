@@ -32,7 +32,7 @@ fetch(urlPeliculas)
             titulo.innerText = `Resultados de la busqueda para: ${busqueda}`
         }
         else{
-            pelicula.innerHTML = `<p> No hay resultados para su busqueda </p>`
+            pelicula.innerHTML = `<p class="detalles"> No hay resultados para su busqueda </p>`
         }
         return data
     })
@@ -61,7 +61,7 @@ fetch(urlPeliculas)
             titulo.innerText = `Resultados de la busqueda para: ${busqueda}`
         }
         else{
-            serie.innerHTML = `<p> No hay resultados para su busqueda </p>`
+            serie.innerHTML = `<p class="detalles"> No hay resultados para su busqueda </p>`
         }
         return data
     })
