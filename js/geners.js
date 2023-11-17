@@ -18,35 +18,44 @@ fetch(GenerosPeliculas)
         console.log(data.genres)
         let generos = data.genres
         let informacion = ""
-        for (let index = 1; index < 10; index++){
-            informacion += `<ul class="cajaPadre1">
-            <li class="contenedor-input"><a class="contenedor-input" href="../PI-Grupo-11-VJD/detail-genres.html?id=${data.genres[index].title}"></a></li>
-            </ul>`
+        for (let index = 0; index < 10; index++){
+            informacion += `
+            <li class="contenedor-input"><a class="contenedor-input" href="./detail-genres.html?id=${data.genres[index].id}">${data.genres[index].name}</a></li>
+           `
         }
+
+        genresPeliculas.innerHTML= informacion
     })
 
     .catch(function(error){
         console.log(error);
     })
 
-fetch(GenerosSeries)
+
+
+    fetch(GenerosSeries)
     .then(function(response) {
         return response.json()
     })
 
     .then (function(data) {
-        console.log(data)
-        let documento = document.querySelector(".genresSeries")
-        for (let index = 1; index < 10; index++){
-            documento.innerHTML += `<ul class="cajaPadre1">
-            <li class="contenedor-input"><a class="contenedor-input" href="../PI-Grupo-11-VJD/detail-genres.html?id =${data.results[index].id}"></a></li>
-            </ul>`
+        console.log(data.genres)
+        let generos = data.genres
+        let informacion = ""
+        for (let index = 0; index < 10; index++){
+            informacion += `
+            <li class="contenedor-input"><a class="contenedor-input" href="./detail-genres.html?id=${data.genres[index].id}">${data.genres[index].name}</a></li>
+           `
         }
+
+        genresSeries.innerHTML= informacion
     })
 
     .catch(function(error){
         console.log(error);
     })
+
+
 
 
 

@@ -121,12 +121,20 @@
     font-size: 20px;
 }
 
+.recomendar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* genres */
 
 .cajaPadre1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    list-style-type: none;
 }
 
 .contenedor-input{
@@ -147,6 +155,11 @@
     padding: 0px;
     display: flex;
     justify-content: space-around;
+}
+.g{
+    color: white;
+    text-decoration: none;
+    padding: 0px 5px;
 }
 
 /* search results */

@@ -26,7 +26,8 @@ fetch(detailPelicula)
         
         let generos = ""
         for (let index = 0; index < data.genres.length; index++) {
-            generos += `${data.genres[index].name}`
+            generos += `<a  class="g" href="./detail-genres.html?id=${data.genres[index].id}">${data.genres[index].name}</a>
+            `
         }
 
         imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
@@ -35,7 +36,7 @@ fetch(detailPelicula)
         fecha.innerHTML += "Estreno: " + data.release_date;
         duracion.innerText += "Duracion: " + data.runtime + " mins"
         sinopsis.innerText += "Sinopsis: " + data.overview;
-        genero.innerText += "Genero: " + generos;
+        genero.innerHTML += "Genero: " + generos;
        
     })
         .catch(function(error){

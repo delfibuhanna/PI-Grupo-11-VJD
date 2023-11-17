@@ -8,7 +8,6 @@ let titulo = document.querySelector('#titulo')
 let imagen = document.querySelector('#serie')
 let rating = document.querySelector('#rating')
 let fecha = document.querySelector('#fecha')
-let duracion = document.querySelector('#duracion')
 let sinopsis = document.querySelector('#sinopsis')
 let genero = document.querySelector('#genero')
 
@@ -24,14 +23,13 @@ fetch(detailSerie)
         console.log(data);
         let generos = ""
         for (let index = 0; index < data.genres.length; index++) {
-            generos += `<a href="detail-genres.html?id=${data.genres[index].id}">${data.genres[index].name}`
+            generos += `${data.genres[index].name}`
         }
 
         imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
         titulo.innerText += " " + data.name;
         rating.innerText += "Rating: " + data.vote_average;
         fecha.innerHTML += "Estreno: " + data.first_air_date;
-        duracion.innerText += "Duracion: " + data.number_of_episodes + " capitulos";
         sinopsis.innerText += "Sinopsis: " + data.overview;
         genero.innerText += "Genero: " + generos;
        
