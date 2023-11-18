@@ -20,7 +20,7 @@ fetch(GenerosPeliculas)
         for (let index = 0; index < 5; index++){
             console.log(data.results[index].poster_path)
             if (data.results[index].poster_path!=null) {
-                informacion += `<article class="seccion">
+                informacion += `<article class="pelicula1">
                 <a href="./detail-movie.html?id=${data.results[index].id}"><img class="fotopeliculas" src="https://image.tmdb.org/t/p/w500/${data.results[index].poster_path}" alt="" ></a>
                 <h3 class="titulo"><strong>${data.results[index].title}</strong></h3>
                 <h4 class="titulo"><strong>${data.results[index].release_date}</strong></h4>
@@ -44,7 +44,11 @@ fetch(GenerosSeries)
         for (let index = 0; index < 5; index++){
                 console.log(data.results[index].poster_path)
                 if (data.results[index].poster_path!=null) {
-                    informacion += `<li class="contenedor-input"><a class="contenedor-input" href="./detail-genres.html?id=${data.results[index].id}">${data.results[index].name}</a></li>` 
+                    informacion += `<article class="pelicula1">
+                    <a href="./detail-movie.html?id=${data.results[index].id}"><img class="fotopeliculas" src="https://image.tmdb.org/t/p/w500/${data.results[index].poster_path}" alt="" ></a>
+                    <h3 class="titulo"><strong>${data.results[index].name}</strong></h3>
+                    <h4 class="titulo"><strong>${data.results[index].first_air_date}</strong></h4>
+                </article>`
                 }
             }
             genresSeries.innerHTML= informacion
