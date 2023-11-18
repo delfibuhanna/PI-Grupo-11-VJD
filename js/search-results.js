@@ -2,14 +2,13 @@ let api_key= '325b851d442abfa1f66681afca0f296b'
 let loc = location.search;
 let o = new URLSearchParams(loc)
 let busqueda = o.get("Busqueda")
-
 let urlPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${busqueda}`
 let urlSeries = `https://api.themoviedb.org/3/search/tv?api_key=${api_key}&query=${busqueda}`
 
 let titulo = document.querySelector(".titulos_principales");
 let serie = document.querySelector("#seccionS");
 let pelicula = document.querySelector(".seccion");
-
+titulo.innerHTML = `<img src=".//img/giphy.gif" alt="cargando..">`;
 
 
 fetch(urlPeliculas)

@@ -42,14 +42,6 @@ fetch(detailPelicula)
             console.log(error)
     });
     
- 
-
-
-
-
-
-
-
 
 boton.addEventListener("click", function (e){
     let recom = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${api_key}`;
